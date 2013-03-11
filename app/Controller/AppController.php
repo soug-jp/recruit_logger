@@ -39,11 +39,19 @@ class AppController extends Controller {
             'logoutRedirect' => '/',
             'loginAction' => '/Users/index',
         ),
+        'Security',
     );
 
     public function beforeFilter()
     {
         $this->Auth->fields = array('username' => 'atoken_key', 'password' => 'atoken_sec');
+        $this->Security->blackHoleCallBack = 'blackHoleCallBack';
+
         parent::beforeFilter();
+    }
+    
+    public function blackHoleCallBack() 
+    {
+        $this->render(null,null, VIEWS.'Layouts'.DS.'blackhole.ctp');
     }
 }
