@@ -57,6 +57,5 @@ $cakeDescription = 'みんなの就活状況記録（仮） - Powered  by 学生
 			?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
