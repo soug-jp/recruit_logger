@@ -3,7 +3,7 @@
 class CompaniesController extends AppController 
 {
 	public $uses = array('Company', 'User', 'State');
-    public $components = array('Auth');
+    public $components = array('Auth', 'Security');
 
     public function index()
     {
