@@ -43,6 +43,7 @@ $cakeDescription = 'みんなの就活状況記録（仮） - Powered  by 学生
 			<h1><?php echo $cakeDescription; ?></h1>
 		</div>
 		<div id="content">
+            <?php echo $this->element('alpha_testing_notice');?>
 
 			<?php echo $this->Session->flash(); ?>
 
